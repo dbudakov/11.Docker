@@ -1,11 +1,11 @@
-Установка `docker` [офиц. здесь](https://docs.docker.com/engine/install/centos/) и [здесь](https://1cloud.ru/help/linux/instruktsiya-docker-na-centos7)  
+Установка `docker` [офиц. здесь](https://docs.docker.com/engine/install/centos/) и [здесь](https://1cloud.ru/help/linux/instruktsiya-docker-na-centos7)    
 ```
 sudo yum check-update
 curl -fsSL https://get.docker.com/ | sh
 sudo usermod -aG docker <имя пользователя> 
 sudo systemctl start docker
 ```
-Установка `docker-compose` [здесь](https://docs.docker.com/compose/install/)  
+Установка `docker-compose` [здесь](https://docs.docker.com/compose/install/)    
 ```
 sudo curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
@@ -13,7 +13,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 ```
 
-cодержание `dockerfile`:  
+Cодержание `Dockerfile`:      
 ```
 FROM alpine:3.11        # базовая архитектура контейнера
 WORKDIR /home/vagrant   # рабочая директория, будут являтся точкой отсчёта для контейнера
@@ -28,7 +28,7 @@ CMD /usr/sbin/nginx -c /etc/nginx/nginx.conf        # запуск nginx исп�
 ```
 
 
-Для сборки контейнера набираем следующую команду:  
+Для сборки контейнера набираем следующую команду:   
 ```
 docker build -t lesson_nginx . --no-cache
 ## здесь:
@@ -38,12 +38,12 @@ docker build -t lesson_nginx . --no-cache
 ```
 
  
-Для проверки загруженного контейнера на репозиторий можно выполнить
-
+Для проверки загруженного контейнера на репозиторий можно выполнить   
+```
 docker run -d dbudakov/lesson:lesson_nginx
 curl $(docker inspect --format {{.NetworkSettings.IPAddress}} $(docker ps|awk '/dbudakov/ {print $1}'))
-
-#### Дополнительные материалы   
+```
+#### Дополнительные материалы    
 ```
 docker tag [image] [repository]:[image]  # затагировать image для заливки  
 docker push [repository]:[image]         # залить image 
