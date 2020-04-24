@@ -11,7 +11,7 @@
 2.Можно ли в контейнере собрать ядро?   
 Ответ: думаю да, также скачать исходники или зааттачить из хоста, вместе с `config` текущего ядра, дальше сборка ядра по сценарию, как на обычной ОС. Можно ли запустить контейнер на альтернативном ядре, слышал что да, но не интересовался этой темой, думаю это собирается в `Dockerfile`. 
 
-dockerhub: [docker pull dbudakov/lesson:lesson_nginx](docker pull dbudakov/lesson:lesson_nginx)    
+dockerhub: [docker pull dbudakov/lesson:lesson_nginx](https://hub.docker.com/repository/docker/dbudakov/lesson/tags?page=1)    
 
 Установка `docker` [офиц. здесь](https://docs.docker.com/engine/install/centos/) и [здесь](https://1cloud.ru/help/linux/instruktsiya-docker-na-centos7)    
 ```
