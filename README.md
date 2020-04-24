@@ -49,7 +49,7 @@ docker build -t lesson_nginx . --no-cache
 #  .          - обозначает текущую директория
 #  --no-cache - значит не использовать кэш предыдущих сборок
 ```
-Далее заливаем на `dockerhub`
+Далее заливаем полученный `image` на `dockerhub`
 ```
 docker tag  lesson_nginx  dbudakov/lesson:lesson_nginx
 docker push dbudakov/lesson:lesson_nginx
