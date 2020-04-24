@@ -49,13 +49,19 @@ docker build -t lesson_nginx . --no-cache
 #  .          - обозначает текущую директория
 #  --no-cache - значит не использовать кэш предыдущих сборок
 ```
-
+Далее заливаем на `dockerhub`
+```
+docker tag  lesson_nginx  dbudakov/lesson:lesson_nginx
+docker push dbudakov/lesson:lesson_nginx
+```
  
 Для проверки загруженного контейнера на репозиторий можно выполнить  
-dockerhub: [docker pull dbudakov/lesson:lesson_nginx](https://hub.docker.com/repository/docker/dbudakov/lesson/tags?page=1)   
 ```
 docker run -d dbudakov/lesson:lesson_nginx
 curl $(docker inspect --format {{.NetworkSettings.IPAddress}} $(docker ps|awk '/dbudakov/ {print $1}'))
+or
+docker pull docker pull dbudakov/lesson:lesson_nginx
+docker run -d $(docker ps|awk '/dbudakov/ {print $1}')
 ```
 #### Дополнительные материалы    
 ```
