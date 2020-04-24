@@ -52,7 +52,8 @@ docker build -t lesson_nginx . --no-cache
 
  
 Для проверки загруженного контейнера на репозиторий можно выполнить  
-dockerhub: [docker pull dbudakov/lesson:lesson_nginx](https://hub.docker.com/repository/docker/dbudakov/lesson/tags?page=1)    ```
+dockerhub: [docker pull dbudakov/lesson:lesson_nginx](https://hub.docker.com/repository/docker/dbudakov/lesson/tags?page=1)   
+```
 docker run -d dbudakov/lesson:lesson_nginx
 curl $(docker inspect --format {{.NetworkSettings.IPAddress}} $(docker ps|awk '/dbudakov/ {print $1}'))
 ```
