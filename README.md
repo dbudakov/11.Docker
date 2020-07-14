@@ -86,6 +86,7 @@ docker network inspect
 docker stop 5a1f377 5020b13 60cae22
 
 docker-compose up -d - деплой списка контейнеров заданных в .yml  файле
+  
 ```
 
 microbadger.com - множество собранных контейнеров
