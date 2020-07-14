@@ -78,7 +78,7 @@ docker run -p 80:80 nginx - запуск контейра от imange-nginx с �
 docker exec -it d3df35d bash - войти в контейнер с оболочкой bash
 docker logs 352dsfa35 - события по контейнеру
 docker inspect 352dsfa35
-docker run -d -rm --name u1 ubuntu
+docker run -d --rm --name u1 ubuntu
 docker run -d --name u1 ubuntu sleep 3000
 docker run -d --name u2 --network=mybridge ubuntu sleep 3000
 docker network ls
