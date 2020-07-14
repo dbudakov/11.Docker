@@ -68,3 +68,24 @@ docker run -d $(docker ps|awk '/dbudakov/ {print $1}')
 docker tag [image] [repository]:[image]  # затагировать image для заливки  
 docker push [repository]:[image]         # залить image 
 ```
+основные команды:  
+```
+docker ps -a - список запущенных контейнеров
+docker rm 42139d 355da53 - удаление созданных контейнеров
+docker images - список images
+docker rmi 5cdskiah - удаление image по идентификатору
+docker run -p 80:80 nginx - запуск контейра от imange-nginx с прокинутым 80 портом с хоста
+docker exec -it d3df35d bash - войти в контейнер с оболочкой bash
+docker logs 352dsfa35 - события по контейнеру
+docker inspect 352dsfa35
+docker run -d -rm --name u1 ubuntu
+docker run -d --name u1 ubuntu sleep 3000
+docker run -d --name u2 --network=mybridge ubuntu sleep 3000
+docker network ls
+docker network inspect
+docker stop 5a1f377 5020b13 60cae22
+
+docker-compose up -d - деплой списка контейнеров заданных в .yml  файле
+```
+
+microbadger.com - множество собранных контейнеров
