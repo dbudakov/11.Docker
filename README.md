@@ -88,5 +88,6 @@ docker stop 5a1f377 5020b13 60cae22
 docker-compose up -d - деплой списка контейнеров заданных в .yml  файле
   
 ```
-
-microbadger.com - множество собранных контейнеров
+#### Дополнительно
+microbadger.com - множество собранных контейнеров  
+Права пользователю на запуск контейнеров, требует `systemd v226` [здесь](https://superuser.com/questions/1064616/polkit-systemd-interaction),  [update systemd](https://copr.fedorainfracloud.org/coprs/jsynacek/systemd-backports-for-centos-7/),  [update systemd source](https://github.com/systemd/systemd/releases)   
