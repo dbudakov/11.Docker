@@ -52,6 +52,8 @@ docker build -t lesson_nginx . --no-cache
 Далее заливаем полученный `image` на `dockerhub`
 ```
 docker tag  lesson_nginx  dbudakov/lesson:lesson_nginx
+
+docker login
 docker push dbudakov/lesson:lesson_nginx
 ```
  
