@@ -70,6 +70,7 @@ docker push [repository]:[image]         # залить image
 ```
 основные команды:  
 ```
+docker build -t lesson_nginx . --no-cache - сборка контейнера(описание выше)
 docker ps -a - список запущенных контейнеров
 docker rm 42139d 355da53 - удаление созданных контейнеров
 docker images - список images
