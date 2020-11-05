@@ -90,6 +90,7 @@ docker stop 5a1f377 5020b13 60cae22
 
 docker-compose up -d - деплой списка контейнеров заданных в .yml  файле
 
+docker-compose up --build -d - пересобрать контейнер из текущей дирректории
 docker logs [id] - выводит логи по контейнеру
 docker ps -lq - выводит id
   
