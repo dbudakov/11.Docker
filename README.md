@@ -96,7 +96,7 @@ docker ps -lq - выводит id
   
 ```
 #### Дополнительно
-*manual* __docker ps__ [link](https://docs.docker.com/engine/reference/commandline/ps/)  
+__manual docker ps__ [link](https://docs.docker.com/engine/reference/commandline/ps/)  
 microbadger.com - множество собранных контейнеров  
 Права пользователю на запуск контейнеров, требует `systemd v226` [здесь](https://superuser.com/questions/1064616/polkit-systemd-interaction),  [update systemd](https://copr.fedorainfracloud.org/coprs/jsynacek/systemd-backports-for-centos-7/),  [update systemd source](https://github.com/systemd/systemd/releases)    
 [Как nginx указать на php-fpm на другом докере?](https://qna.habr.com/q/597608)  
