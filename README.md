@@ -100,6 +100,11 @@ docker ps -lq - выводит id
 # вывести ID и Name
 docker ps --format "table {{.ID}}\t{{.Names}}"
 ```
+заметки  
+```sh
+# переход в контейнер 
+echo -n "write container id/name: " ; read a; docker exec -it $a bash
+```
 #### Дополнительно
 microbadger.com - множество собранных контейнеров  
 Права пользователю на запуск контейнеров, требует `systemd v226` [здесь](https://superuser.com/questions/1064616/polkit-systemd-interaction),  [update systemd](https://copr.fedorainfracloud.org/coprs/jsynacek/systemd-backports-for-centos-7/),  [update systemd source](https://github.com/systemd/systemd/releases)    
