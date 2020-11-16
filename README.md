@@ -98,7 +98,7 @@ docker ps -lq - выводит id
 Вывод информации по контейнерам [link](https://docs.docker.com/engine/reference/commandline/ps/)  
 ```sh
 # вывести ID и Name
-`docker ps --format "table {{.ID}}\t{{.Names}}"`
+docker ps --format "table {{.ID}}\t{{.Names}}"
 ```
 #### Дополнительно
 microbadger.com - множество собранных контейнеров  
