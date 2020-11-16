@@ -95,8 +95,12 @@ docker logs [id] - выводит логи по контейнеру
 docker ps -lq - выводит id
   
 ```
+Вывод информации по контейнерам [link](https://docs.docker.com/engine/reference/commandline/ps/)  
+```sh
+# вывести ID и Name
+`docker ps --format "table {{.ID}}\t{{.Names}}"`
+```
 #### Дополнительно
-`docker ps --format "table {{.ID}}\t{{.Names}}"` [link](https://docs.docker.com/engine/reference/commandline/ps/)  
 microbadger.com - множество собранных контейнеров  
 Права пользователю на запуск контейнеров, требует `systemd v226` [здесь](https://superuser.com/questions/1064616/polkit-systemd-interaction),  [update systemd](https://copr.fedorainfracloud.org/coprs/jsynacek/systemd-backports-for-centos-7/),  [update systemd source](https://github.com/systemd/systemd/releases)    
 [Как nginx указать на php-fpm на другом докере?](https://qna.habr.com/q/597608)  
