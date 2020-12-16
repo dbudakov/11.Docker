@@ -99,6 +99,10 @@ docker ps -lq - выводит id
 ```sh
 # вывести ID и Name
 docker ps --format "table {{.ID}}\t{{.Names}}"
+
+# вывод файла логов для контейнера
+docker inspect rocketchat_rocketchat_1 |grep -E "LogPath"
+
 ```
 заметки  
 ```sh
