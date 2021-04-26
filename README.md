@@ -106,6 +106,9 @@ docker ps --format "table {{.ID}}\t{{.Names}}"
 # вывод файла логов для контейнера
 docker inspect rocketchat_rocketchat_1 |grep -E "LogPath"
 
+# зачистить логи контейнера
+echo "" > $(docker inspect --format='{{.LogPath}}' <container_name_or_id>)
+
 ```
 заметки  
 ```sh
